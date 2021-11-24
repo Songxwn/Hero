@@ -33,7 +33,7 @@
 <p><code>slmgr /dlv</code></p>
 <p>//查看激活的详细信息</p>
 <p>PS: 默认情况下，会激活 180天，然后每 10080 分钟自动续期一次（只要KMS服务器可用）</p>
-<h2 id="使用DNS-DHCP自动激活。"><a href="#使用DNS-DHCP自动激活。" class="headerlink" title="使用DNS+DHCP自动激活。"></a>使用DNS+DHCP自动激活。</h2><p>首先添加 SRV 记录到DNS服务器的域名中</p>
+<h2 id="使用DNS-DHCP自动激活"><a href="#使用DNS-DHCP自动激活" class="headerlink" title="使用DNS+DHCP自动激活"></a>使用DNS+DHCP自动激活</h2><p>首先添加 SRV 记录到DNS服务器的域名中</p>
 <p>记录名字为 _vlmcs._tcp.</p>
 <p>域控的话，直接有tcp的下级域，所以不需要加上TCP</p>
 <p>然后进入你域控域名中的 _tcp文件夹，然后右键选择其他新记录，然后选择SRV记录。</p>
