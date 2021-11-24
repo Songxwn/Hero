@@ -8,7 +8,7 @@
 ]]></content>
   </entry>
   <entry>
-    <title>部署KMS服务器，并设置局域网自动激活</title>
+    <title>部署KMS服务器，并设置局域网自动激活Windows和office</title>
     <url>/KMS/</url>
     <content><![CDATA[<p>#Docker镜像地址： <a href="https://hub.docker.com/r/mogeko/vlmcsd">https://hub.docker.com/r/mogeko/vlmcsd</a></p>
 <p>#此程序的单独地址： <a href="https://github.com/Wind4/vlmcsd">https://github.com/Wind4/vlmcsd</a></p>
