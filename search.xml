@@ -3,7 +3,8 @@
   <entry>
     <title>Hello World</title>
     <url>/hello-world/</url>
-    <content><![CDATA[<h2 id="欢迎来到我的博客！"><a href="#欢迎来到我的博客！" class="headerlink" title="欢迎来到我的博客！"></a>欢迎来到我的博客！</h2><p>今天终于白嫖用 Github Pages,部署了一个自己的博客，打算发些自己写的技术文章。<br>使用Hexo+Next主题，然后套了CF的CDN。</p>
+    <content><![CDATA[<h2 id="欢迎来到我的博客！"><a href="#欢迎来到我的博客！" class="headerlink" title="欢迎来到我的博客！"></a>欢迎来到我的博客！</h2><span id="more"></span>
+<p>今天终于白嫖用 Github Pages,部署了一个自己的博客，打算发些自己写的技术文章。<br>使用Hexo+Next主题，然后套了CF的CDN。</p>
 ]]></content>
   </entry>
   <entry>
@@ -12,6 +13,9 @@
     <content><![CDATA[<p>#Docker镜像地址： <a href="https://hub.docker.com/r/mogeko/vlmcsd">https://hub.docker.com/r/mogeko/vlmcsd</a></p>
 <p>#此程序的单独地址： <a href="https://github.com/Wind4/vlmcsd">https://github.com/Wind4/vlmcsd</a></p>
 <h2 id="准备环境："><a href="#准备环境：" class="headerlink" title="准备环境："></a>准备环境：</h2><p>一台支持Docker的Linux服务器【运行KMS服务器】，运行在内网的DNS服务器【SRV记录】，DHCP服务器【分配DNS域名】。</p>
+<span id="more"></span>
+
+
 <p><code>docker run -d -p 1688:1688 --restart=always  --name kms mogeko/vlmcsd </code></p>
 <p>// 部署KMS服务器，使用Docker ，端口为 TCP/1688。</p>
 <p><code>docker logs vlmcsd</code></p>
