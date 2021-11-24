@@ -235,7 +235,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-11-24 15:35:54" itemprop="dateModified" datetime="2021-11-24T15:35:54+08:00">2021-11-24</time>
+                <time title="修改时间：2021-11-24 15:40:11" itemprop="dateModified" datetime="2021-11-24T15:40:11+08:00">2021-11-24</time>
               </span>
 
           
@@ -255,7 +255,7 @@
 <p><code>docker run -d -p 1688:1688 --restart=always  --name kms mogeko/vlmcsd </code></p>
 <p>// 部署KMS服务器，使用Docker ，端口为 TCP/1688。</p>
 <p><code>docker logs vlmcsd</code></p>
-<p>2019-07-27 08:14:00: Listening on [::]:1688<br>2019-07-27 08:14:00: Listening on 0.0.0.0:1688<br>2019-07-27 08:14:00: vlmcsd svn1112-2-gf1a3c7f, built 2019-07-26 18:11:51 UTC started successfully</p>
+<p>2021-07-27 08:14:00: Listening on [::]:1688<br>2021-07-27 08:14:00: Listening on 0.0.0.0:1688<br>2021-07-27 08:14:00: vlmcsd svn1112-2-gf1a3c7f, built 2021-07-26 18:11:51 UTC started successfully</p>
 <p>查看日志，确定正常工作。</p>
 <h2 id="手动激活"><a href="#手动激活" class="headerlink" title="手动激活"></a>手动激活</h2><p><code>slmgr /ipk N69G4-B89J2-4G8F4-WWYCC-J464C</code></p>
 <p>//安装密钥</p>
@@ -276,6 +276,8 @@
 <p><img src="/images/pasted-2.png" alt="upload successful"></p>
 <p>然后填写以上，域名为你的域名。服务为 _vlmcs 协议为 _tcp 。端口号为 1688 。<br>提供此服务的主机为   KMS服务器的IP。</p>
 <p>然后配置DHCP 服务器分配的DNS域名后缀为 esc.com即可。<br>之后，未激活的Windows 开机就会通过DHCP获取到 DNS 后缀，然后通过DNS域名中的SVR记录找到<br>KMS激活服务器，并自动激活。其中VL的OFFICE也会自动激活。</p>
+<h2 id="Office-VL版"><a href="#Office-VL版" class="headerlink" title="Office VL版"></a>Office VL版</h2><p>建议使用 Office Tool Plus 安装VL版本，并安装许可证。</p>
+<p>下载地址： <a target="_blank" rel="noopener" href="https://otp.landian.vip/zh-cn/download.html">https://otp.landian.vip/zh-cn/download.html</a></p>
 
       
     </div>
