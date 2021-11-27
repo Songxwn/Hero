@@ -57,9 +57,9 @@
 
 <h2 id="下载解压程序"><a href="#下载解压程序" class="headerlink" title="下载解压程序"></a>下载解压程序</h2><p>去 <a href="https://github.com/Wind4/vlmcsd/releases">https://github.com/Wind4/vlmcsd/releases</a> 下载 binaries.tar.gz 文件。<br>下载到本地，解压。解压软件建议用 Bandizip <a href="https://www.bandisoft.com/bandizip">https://www.bandisoft.com/bandizip</a><br>将binaries/Windows/intel 文件夹重命名为vlmcsd，复制到C:\ 下面。</p>
 <h2 id="注册为Windows-服务。"><a href="#注册为Windows-服务。" class="headerlink" title="注册为Windows 服务。"></a>注册为Windows 服务。</h2><p>以管理员身份运行CMD 或者 Power shell</p>
-<p>输入 <code>cd C:\vkmcsd</code></p>
+<p>输入 <code>cd C:\vlmcsd</code></p>
 <p>// 切换到程序目录</p>
-<p>输入 <code>./vlmcsd-Windows-x64.exe -s -l C:\vkmcsd\KMS.log</code></p>
+<p>输入 <code>./vlmcsd-Windows-x64.exe -s -l C:\vlmcsd\KMS.log</code></p>
 <p>// -s 为安装为服务，-S 是删除服务，-l是指定输出日志文件路径；</p>
 <p>##启动服务</p>
 <p>输入 <code>Services.msc</code> 打开服务管理。</p>
