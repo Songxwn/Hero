@@ -44,4 +44,18 @@
 <p>下载地址： <a href="https://otp.landian.vip/zh-cn/download.html">https://otp.landian.vip/zh-cn/download.html</a></p>
 ]]></content>
   </entry>
+  <entry>
+    <title>Windows 部署私有KMS服务器。</title>
+    <url>/KMS-Windows/</url>
+    <content><![CDATA[<p>程序下载地址：<a href="https://github.com/Wind4/vlmcsd">https://github.com/Wind4/vlmcsd</a></p>
+<p>此文章介绍，怎么在Windows上运行vlmcsd，并注册为服务。</p>
+<span id="more"></span>
+
+
+<h2 id="下载解压程序"><a href="#下载解压程序" class="headerlink" title="下载解压程序"></a>下载解压程序</h2><p>去 <a href="https://github.com/Wind4/vlmcsd/releases">https://github.com/Wind4/vlmcsd/releases</a> 下载 binaries.tar.gz 文件。<br>下载到本地，解压。解压软件建议用 Bandizip <a href="https://www.bandisoft.com/bandizip">https://www.bandisoft.com/bandizip</a><br>将binaries/Windows/intel 文件夹重命名为vlmcsd，复制到C:\ 下面。</p>
+<h2 id="注册为Windows-服务。"><a href="#注册为Windows-服务。" class="headerlink" title="注册为Windows 服务。"></a>注册为Windows 服务。</h2><h2 id="防火墙"><a href="#防火墙" class="headerlink" title="防火墙"></a>防火墙</h2>]]></content>
+      <categories>
+        <category>KMS</category>
+      </categories>
+  </entry>
 </search>

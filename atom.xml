@@ -6,7 +6,7 @@
   <link href="https://songxwn.com/atom.xml" rel="self"/>
   
   <link href="https://songxwn.com/"/>
-  <updated>2021-11-24T08:50:07.957Z</updated>
+  <updated>2021-11-27T02:57:43.803Z</updated>
   <id>https://songxwn.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Windows 部署私有KMS服务器。</title>
+    <link href="https://songxwn.com/KMS-Windows/"/>
+    <id>https://songxwn.com/KMS-Windows/</id>
+    <published>2021-11-26T18:18:00.000Z</published>
+    <updated>2021-11-27T02:57:43.803Z</updated>
+    
+    <content type="html"><![CDATA[<p>程序下载地址：<a href="https://github.com/Wind4/vlmcsd">https://github.com/Wind4/vlmcsd</a></p><p>此文章介绍，怎么在Windows上运行vlmcsd，并注册为服务。</p><span id="more"></span><h2 id="下载解压程序"><a href="#下载解压程序" class="headerlink" title="下载解压程序"></a>下载解压程序</h2><p>去 <a href="https://github.com/Wind4/vlmcsd/releases">https://github.com/Wind4/vlmcsd/releases</a> 下载 binaries.tar.gz 文件。<br>下载到本地，解压。解压软件建议用 Bandizip <a href="https://www.bandisoft.com/bandizip">https://www.bandisoft.com/bandizip</a><br>将binaries/Windows/intel 文件夹重命名为vlmcsd，复制到C:\ 下面。</p><h2 id="注册为Windows-服务。"><a href="#注册为Windows-服务。" class="headerlink" title="注册为Windows 服务。"></a>注册为Windows 服务。</h2><h2 id="防火墙"><a href="#防火墙" class="headerlink" title="防火墙"></a>防火墙</h2>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;程序下载地址：&lt;a href=&quot;https://github.com/Wind4/vlmcsd&quot;&gt;https://github.com/Wind4/vlmcsd&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;此文章介绍，怎么在Windows上运行vlmcsd，并注册为服务。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="KMS" scheme="https://songxwn.com/categories/KMS/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>部署私有KMS服务器，并设置自动激活Windows和office</title>
