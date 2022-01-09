@@ -61,8 +61,7 @@
 <p>// 切换到程序目录</p>
 <p>输入 <code>./vlmcsd-Windows-x64.exe -s -l C:\vlmcsd\KMS.log</code></p>
 <p>// -s 为安装为服务，-S 是删除服务，-l是指定输出日志文件路径；</p>
-<p>##启动服务</p>
-<p>输入 <code>Services.msc</code> 打开服务管理。</p>
+<h2 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h2><p>输入 <code>Services.msc</code> 打开服务管理。</p>
 <p>找到Key Management Server 服务器，启动服务，并确保启动类型为自动。</p>
 <h2 id="防火墙"><a href="#防火墙" class="headerlink" title="防火墙"></a>防火墙</h2><p>将防火墙开放1688/tcp端口，或者直接关闭防火墙。</p>
 <h2 id="验证服务是否正常运行"><a href="#验证服务是否正常运行" class="headerlink" title="验证服务是否正常运行"></a>验证服务是否正常运行</h2><p>输入 <code>./vlmcs-Windows-x64.exe</code></p>
