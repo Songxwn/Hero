@@ -6,7 +6,7 @@
   <link href="https://songxwn.com/atom.xml" rel="self"/>
   
   <link href="https://songxwn.com/"/>
-  <updated>2022-01-09T14:20:09.259Z</updated>
+  <updated>2022-01-09T17:05:54.176Z</updated>
   <id>https://songxwn.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>IPv6的ICMPv6协议</title>
+    <link href="https://songxwn.com/ipv6-icmpv6/"/>
+    <id>https://songxwn.com/ipv6-icmpv6/</id>
+    <published>2022-01-09T17:54:00.000Z</published>
+    <updated>2022-01-09T17:05:54.176Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h1&gt;&lt;p&gt;ICMPv6是IPv6的基础协议之一，协议类型号（即IPv6 Next Header）为58。&lt;br&gt;除了提供基本的检测网络连通性功能外，还提供了邻居发现(NDP)、无状态地址配置(SLAAC)、&lt;br&gt;重复地址检测（DAD）、PMTU等新功能。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="network" scheme="https://songxwn.com/categories/network/"/>
+    
+    
+    <category term="IPv6" scheme="https://songxwn.com/tags/IPv6/"/>
+    
+    <category term="network" scheme="https://songxwn.com/tags/network/"/>
+    
+  </entry>
   
   <entry>
     <title>Windows上的IPv6</title>
