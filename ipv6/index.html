@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"songxwn.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="##IPv6简介#介绍本质上IPv6就是为了解决IPv4地址空间不够而出现的。长度由IPv4的32bit，扩展到了128bit。可以说IPv6地址数量近乎无限，以万亿为单位都显得不足。#表示方法IPv6有别于IPv4的点分十进制表示，使用了十六进制表示，以冒号(:)来每四位分割，其中0在前面的都可以省略。有连续多个0的，可以通过 :: 来压缩表示。但只能压缩一次。如 2000:0000:0000:">
+  <meta name="description" content="##IPv6简介#介绍本质上IPv6就是为了解决IPv4地址空间不够而出现的。长度由IPv4的32bit，扩展到了128bit。可以说IPv6地址数量近乎无限，以万亿为单位都显得不足。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="IPv6地址简笔">
 <meta property="og:url" content="https://songxwn.com/ipv6/index.html">
 <meta property="og:site_name" content="Song&#96;s Blog">
-<meta property="og:description" content="##IPv6简介#介绍本质上IPv6就是为了解决IPv4地址空间不够而出现的。长度由IPv4的32bit，扩展到了128bit。可以说IPv6地址数量近乎无限，以万亿为单位都显得不足。#表示方法IPv6有别于IPv4的点分十进制表示，使用了十六进制表示，以冒号(:)来每四位分割，其中0在前面的都可以省略。有连续多个0的，可以通过 :: 来压缩表示。但只能压缩一次。如 2000:0000:0000:">
+<meta property="og:description" content="##IPv6简介#介绍本质上IPv6就是为了解决IPv4地址空间不够而出现的。长度由IPv4的32bit，扩展到了128bit。可以说IPv6地址数量近乎无限，以万亿为单位都显得不足。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-01-09T06:54:00.000Z">
-<meta property="article:modified_time" content="2022-01-09T06:55:10.303Z">
+<meta property="article:modified_time" content="2022-01-09T06:56:02.534Z">
 <meta property="article:author" content="Song">
 <meta name="twitter:card" content="summary">
 
@@ -175,7 +175,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-01-09 14:54:00 / 修改时间：14:55:10" itemprop="dateCreated datePublished" datetime="2022-01-09T14:54:00+08:00">2022-01-09</time>
+              <time title="创建时间：2022-01-09 14:54:00 / 修改时间：14:56:02" itemprop="dateCreated datePublished" datetime="2022-01-09T14:54:00+08:00">2022-01-09</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -198,7 +198,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>##IPv6简介<br>#介绍<br>本质上IPv6就是为了解决IPv4地址空间不够而出现的。<br>长度由IPv4的32bit，扩展到了128bit。可以说IPv6地址数量近乎无限，以万亿为单位都显得不足。<br>#表示方法<br>IPv6有别于IPv4的点分十进制表示，使用了十六进制表示，以冒号(:)来每四位分割，其中0在前面的都可以省略。<br>有连续多个0的，可以通过 :: 来压缩表示。但只能压缩一次。<br>如 2000:0000:0000:0000:0000:0000:0000:0000，可以压缩为 2000:: 来表示。<br>#前缀长度（子网掩码）<br>IPv6中的子网掩码叫做前缀长度，为128位。其中网络地址也可以用于互联,且无广播地址。所以 /127的地址，有两个可用IP。</p>
+        <p>##IPv6简介<br>#介绍<br>本质上IPv6就是为了解决IPv4地址空间不够而出现的。<br>长度由IPv4的32bit，扩展到了128bit。可以说IPv6地址数量近乎无限，以万亿为单位都显得不足。</p>
+<span id="more"></span>
+<p>#表示方法<br>IPv6有别于IPv4的点分十进制表示，使用了十六进制表示，以冒号(:)来每四位分割，其中0在前面的都可以省略。<br>有连续多个0的，可以通过 :: 来压缩表示。但只能压缩一次。<br>如 2000:0000:0000:0000:0000:0000:0000:0000，可以压缩为 2000:: 来表示。<br>#前缀长度（子网掩码）<br>IPv6中的子网掩码叫做前缀长度，为128位。其中网络地址也可以用于互联,且无广播地址。所以 /127的地址，有两个可用IP。</p>
 <p>##IPv6地址分类</p>
 <p>#全球单播地址<br>范围是 2000::/3 ,对应IPv4的公网地址。</p>
 <p>#链路本地地址<br>范围是 FE80::/10，此地址是必须有的。前64bit固定为FE80:: 后64bit的接口ID可以手动指定或者通过EUI-64算法自动生成（根据MAC地址生成），<br>不过一些操作系统，比如Windows使用了随机生成，是为了隐藏MAC地址。而且还生成了一个临时地址，用于对外访问。<br>接口ID还以根据网络环境变化，网络环境不变则固定，更改则改变。<br>来源：<a target="_blank" rel="noopener" href="https://www.networkacademy.io/ccna/ipv6/ipv6-on-windows">https://www.networkacademy.io/ccna/ipv6/ipv6-on-windows</a><br>参考：<a target="_blank" rel="noopener" href="https://network.51cto.com/art/201910/603898.htm">https://network.51cto.com/art/201910/603898.htm</a></p>
