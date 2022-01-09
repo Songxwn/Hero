@@ -91,7 +91,7 @@
 <h1 id="IPv6地址自动分配方法"><a href="#IPv6地址自动分配方法" class="headerlink" title="IPv6地址自动分配方法"></a>IPv6地址自动分配方法</h1><h2 id="DHCPv6"><a href="#DHCPv6" class="headerlink" title="DHCPv6"></a>DHCPv6</h2><p>DHCPv6又可以称之为有状态分配，与IPv4的DHCP很相似。分发的地址由DHCPv6服务器控制。<br>可以分配IPv6地址，前缀长度、网关、DNS、域名等信息。</p>
 <h2 id="SLAAC"><a href="#SLAAC" class="headerlink" title="SLAAC"></a>SLAAC</h2><p>无状态分配，由路由器通过 RS报文分发前缀信息，网关为分发前缀的路由。<br>其中后64bit的接口ID,由链路本地地址的后64bit组成。所以无状态分配的前缀必须大于等于/64。<br>比较新的标准可以使用RA报文分配DNS服务器。之前是不支持分配的。</p>
 <p>##无状态DHCPv6</p>
-<p>IPv6前缀信息由RA报文分发，其他信息，例如DNS使用DHCPv6分配。无状态+有状态结合的方法分发地址。</p>
+<p>IPv6前缀信息由RA报文分发，通过SLACC生成地址。其他信息，例如DNS使用DHCPv6分配。无状态+有状态结合的方法分发地址。</p>
 <p>PS：写博客好麻烦，我好懒。</p>
 ]]></content>
       <categories>
