@@ -75,7 +75,7 @@
   <entry>
     <title>IPv6 简笔</title>
     <url>/ipv6/</url>
-    <content><![CDATA[<h2 id="IPv6简介"><a href="#IPv6简介" class="headerlink" title="IPv6简介"></a>IPv6简介</h2><p>#介绍<br>本质上IPv6就是为了解决IPv4地址空间不够而出现的。<br>长度由IPv4的32bit，扩展到了128bit。可以说IPv6地址数量近乎无限，以万亿为单位都显得不足。</p>
+    <content><![CDATA[<h2 id="IPv6简介"><a href="#IPv6简介" class="headerlink" title="IPv6简介"></a>IPv6简介</h2><h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>本质上IPv6就是为了解决IPv4地址空间不够而出现的。<br>长度由IPv4的32bit，扩展到了128bit。可以说IPv6地址数量近乎无限，以万亿为单位都显得不足。</p>
 <span id="more"></span>
 <h1 id="表示方法"><a href="#表示方法" class="headerlink" title="表示方法"></a>表示方法</h1><p>IPv6有别于IPv4的点分十进制表示，使用了十六进制表示，以冒号(:)来每四位分割，其中0在前面的都可以省略。<br>有连续多个0的，可以通过 :: 来压缩表示。但只能压缩一次。<br>如 2000:0000:0000:0000:0000:0000:0000:0000，可以压缩为 2000:: 来表示。</p>
 <h1 id="前缀长度（子网掩码）"><a href="#前缀长度（子网掩码）" class="headerlink" title="前缀长度（子网掩码）"></a>前缀长度（子网掩码）</h1><p>IPv6中的子网掩码叫做前缀长度，为128位。其中网络地址也可以用于互联,且无广播地址。所以 /127的地址，有两个可用IP。</p>
