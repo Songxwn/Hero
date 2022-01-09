@@ -96,6 +96,7 @@
 <p>无状态分配，由路由器通过 RS报文分发前缀信息，网关为分发前缀的路由。<br>其中后64bit的接口ID,由链路本地地址的后64bit组成。所以无状态分配的前缀必须大于等于/64。<br>比较新的标准可以使用RA报文分配DNS服务器。之前是不支持分配的。</p>
 <p>#无状态DHCPv6</p>
 <p>IPv6前缀信息由RA报文分发，其他信息，例如DNS使用DHCPv6分配。</p>
+<p>PS：写博客好麻烦，我好懒。</p>
 ]]></content>
       <categories>
         <category>network</category>
