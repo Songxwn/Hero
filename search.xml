@@ -90,8 +90,7 @@
 <h2 id="被请求节点组播地址"><a href="#被请求节点组播地址" class="headerlink" title="被请求节点组播地址"></a>被请求节点组播地址</h2><p>范围是 FF02::1:FF00:0/104，其地址是一种特殊的IPv6组播地址。<br>当接口配置了单播地址的时候，接口会自动生成被请求节点组播地址，并加入此组播组。用于地址解析、邻居发现和重复地址检测。<br>其中前缀固定为FF02::1:FF:, 后24bit，由单播IPv6的后24bit组成。<br>可以说此地址是为了代替广播地址产生，可以减少主机收到和无关的报文。</p>
 <h1 id="IPv6地址自动分配方法"><a href="#IPv6地址自动分配方法" class="headerlink" title="IPv6地址自动分配方法"></a>IPv6地址自动分配方法</h1><h2 id="DHCPv6"><a href="#DHCPv6" class="headerlink" title="DHCPv6"></a>DHCPv6</h2><p>DHCPv6又可以称之为有状态分配，与IPv4的DHCP很相似。分发的地址由DHCPv6服务器控制。<br>可以分配IPv6地址，前缀长度、网关、DNS、域名等信息。</p>
 <h2 id="SLAAC"><a href="#SLAAC" class="headerlink" title="SLAAC"></a>SLAAC</h2><p>无状态分配，由路由器通过 RS报文分发前缀信息，网关为分发前缀的路由。<br>其中后64bit的接口ID,由链路本地地址的后64bit组成。所以无状态分配的前缀必须大于等于/64。<br>比较新的标准可以使用RA报文分配DNS服务器。之前是不支持分配的。</p>
-<p>##无状态DHCPv6</p>
-<p>IPv6前缀信息由RA报文分发，通过SLACC生成地址。其他信息，例如DNS使用DHCPv6分配。无状态+有状态结合的方法分发地址。</p>
+<h2 id="无状态DHCPv6"><a href="#无状态DHCPv6" class="headerlink" title="无状态DHCPv6"></a>无状态DHCPv6</h2><p>IPv6前缀信息由RA报文分发，通过SLACC生成地址。其他信息，例如DNS使用DHCPv6分配。无状态+有状态结合的方法分发地址。</p>
 <h1 id="IPv6工具"><a href="#IPv6工具" class="headerlink" title="IPv6工具"></a>IPv6工具</h1><h2 id="IPv6的子网计算器"><a href="#IPv6的子网计算器" class="headerlink" title="IPv6的子网计算器"></a>IPv6的子网计算器</h2><p><a href="http://www.gestioip.net/cgi-bin/subnet_calculator.cgi">http://www.gestioip.net/cgi-bin/subnet_calculator.cgi</a></p>
 <h2 id="IPv6归属查询"><a href="#IPv6归属查询" class="headerlink" title="IPv6归属查询"></a>IPv6归属查询</h2><p><a href="http://ip.zxinc.org/ipquery/">http://ip.zxinc.org/ipquery/</a></p>
 <h2 id="IPv6连接测试"><a href="#IPv6连接测试" class="headerlink" title="IPv6连接测试"></a>IPv6连接测试</h2><p><a href="http://www.test-ipv6.com/">http://www.test-ipv6.com/</a></p>
