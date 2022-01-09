@@ -92,10 +92,15 @@
 <h2 id="SLAAC"><a href="#SLAAC" class="headerlink" title="SLAAC"></a>SLAAC</h2><p>无状态分配，由路由器通过 RS报文分发前缀信息，网关为分发前缀的路由。<br>其中后64bit的接口ID,由链路本地地址的后64bit组成。所以无状态分配的前缀必须大于等于/64。<br>比较新的标准可以使用RA报文分配DNS服务器。之前是不支持分配的。</p>
 <p>##无状态DHCPv6</p>
 <p>IPv6前缀信息由RA报文分发，通过SLACC生成地址。其他信息，例如DNS使用DHCPv6分配。无状态+有状态结合的方法分发地址。</p>
+<p>#IPv6工具<br>IPv4+IPv6的子网计算器 <a href="http://www.gestioip.net/cgi-bin/subnet_calculator.cgi">http://www.gestioip.net/cgi-bin/subnet_calculator.cgi</a><br>IP归属查询 <a href="http://ip.zxinc.org/ipquery/">http://ip.zxinc.org/ipquery/</a><br>IPv6连接测试 <a href="http://www.test-ipv6.com/">http://www.test-ipv6.com/</a></p>
 <p>PS：写博客好麻烦，我好懒。</p>
 ]]></content>
       <categories>
         <category>network</category>
       </categories>
+      <tags>
+        <tag>IPv6</tag>
+        <tag>network</tag>
+      </tags>
   </entry>
 </search>
