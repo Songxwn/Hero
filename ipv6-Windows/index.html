@@ -20,20 +20,22 @@
     var CONFIG = {"hostname":"songxwn.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="程序下载地址：https:&#x2F;&#x2F;github.com&#x2F;Wind4&#x2F;vlmcsd 此文章介绍，怎么在Windows上运行vlmcsd，并注册为服务。">
+  <meta name="description" content="Windows和EUI-64通常情况下，链路本地地址的接口ID是由MAC地址来生成的，标准叫做EUI-64。（RFC 2373）生成的64bit接口ID,叫做接口标识符。SLAAC（无状态分配）所产生的地址，其接口ID也会使用接口标识符。与链路本地地址的接口ID一样。而这只是在Windows Vista和Windows 2008之前的情况下。为了安全，Windows开始使用了随机化接口ID和临时地">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Windows 部署私有KMS服务器。">
-<meta property="og:url" content="https://songxwn.com/KMS-Windows/index.html">
+<meta property="og:title" content="Windows上的IPv6">
+<meta property="og:url" content="https://songxwn.com/ipv6-Windows/index.html">
 <meta property="og:site_name" content="Song&#96;s Blog">
-<meta property="og:description" content="程序下载地址：https:&#x2F;&#x2F;github.com&#x2F;Wind4&#x2F;vlmcsd 此文章介绍，怎么在Windows上运行vlmcsd，并注册为服务。">
+<meta property="og:description" content="Windows和EUI-64通常情况下，链路本地地址的接口ID是由MAC地址来生成的，标准叫做EUI-64。（RFC 2373）生成的64bit接口ID,叫做接口标识符。SLAAC（无状态分配）所产生的地址，其接口ID也会使用接口标识符。与链路本地地址的接口ID一样。而这只是在Windows Vista和Windows 2008之前的情况下。为了安全，Windows开始使用了随机化接口ID和临时地">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-11-27T12:56:00.000Z">
-<meta property="article:modified_time" content="2022-01-09T07:30:44.468Z">
+<meta property="article:published_time" content="2022-01-09T12:54:00.000Z">
+<meta property="article:modified_time" content="2022-01-09T14:18:16.356Z">
 <meta property="article:author" content="Song">
-<meta property="article:tag" content="Windows">
+<meta property="article:tag" content="IPv6">
+<meta property="article:tag" content="network">
+<meta property="article:tag" content="windows">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://songxwn.com/KMS-Windows/">
+<link rel="canonical" href="https://songxwn.com/ipv6-Windows/">
 
 
 <script id="page-configurations">
@@ -46,7 +48,7 @@
   };
 </script>
 
-  <title>Windows 部署私有KMS服务器。 | Song`s Blog</title>
+  <title>Windows上的IPv6 | Song`s Blog</title>
   
 
 
@@ -152,7 +154,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://songxwn.com/KMS-Windows/">
+    <link itemprop="mainEntityOfPage" href="https://songxwn.com/ipv6-Windows/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -165,7 +167,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Windows 部署私有KMS服务器。
+          Windows上的IPv6
         </h1>
 
         <div class="post-meta">
@@ -174,23 +176,17 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2021-11-27 20:56:00" itemprop="dateCreated datePublished" datetime="2021-11-27T20:56:00+08:00">2021-11-27</time>
+              <time title="创建时间：2022-01-09 20:54:00 / 修改时间：22:18:16" itemprop="dateCreated datePublished" datetime="2022-01-09T20:54:00+08:00">2022-01-09</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-01-09 15:30:44" itemprop="dateModified" datetime="2022-01-09T15:30:44+08:00">2022-01-09</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/KMS/" itemprop="url" rel="index"><span itemprop="name">KMS</span></a>
+                  <a href="/categories/network/" itemprop="url" rel="index"><span itemprop="name">network</span></a>
                 </span>
             </span>
 
@@ -205,22 +201,23 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>程序下载地址：<a target="_blank" rel="noopener" href="https://github.com/Wind4/vlmcsd">https://github.com/Wind4/vlmcsd</a></p>
-<p>此文章介绍，怎么在Windows上运行vlmcsd，并注册为服务。</p>
+        <h1 id="Windows和EUI-64"><a href="#Windows和EUI-64" class="headerlink" title="Windows和EUI-64"></a>Windows和EUI-64</h1><p>通常情况下，链路本地地址的接口ID是由MAC地址来生成的，标准叫做EUI-64。（RFC 2373）<br>生成的64bit接口ID,叫做接口标识符。<br>SLAAC（无状态分配）所产生的地址，其接口ID也会使用接口标识符。与链路本地地址的接口ID一样。<br>而这只是在Windows Vista和Windows 2008之前的情况下。<br>为了安全，Windows开始使用了随机化接口ID和临时地址。（RFC 3041）</p>
 <span id="more"></span>
 
-
-<h2 id="下载解压程序"><a href="#下载解压程序" class="headerlink" title="下载解压程序"></a>下载解压程序</h2><p>去 <a target="_blank" rel="noopener" href="https://github.com/Wind4/vlmcsd/releases">https://github.com/Wind4/vlmcsd/releases</a> 下载 binaries.tar.gz 文件。<br>下载到本地，解压。解压软件建议用 Bandizip <a target="_blank" rel="noopener" href="https://www.bandisoft.com/bandizip">https://www.bandisoft.com/bandizip</a><br>将binaries/Windows/intel 文件夹重命名为vlmcsd，复制到C:\ 下面。</p>
-<h2 id="注册为Windows-服务。"><a href="#注册为Windows-服务。" class="headerlink" title="注册为Windows 服务。"></a>注册为Windows 服务。</h2><p>以管理员身份运行CMD 或者 Power shell</p>
-<p>输入 <code>cd C:\vlmcsd</code></p>
-<p>// 切换到程序目录</p>
-<p>输入 <code>./vlmcsd-Windows-x64.exe -s -l C:\vlmcsd\KMS.log</code></p>
-<p>// -s 为安装为服务，-S 是删除服务，-l是指定输出日志文件路径；</p>
-<h2 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h2><p>输入 <code>Services.msc</code> 打开服务管理。</p>
-<p>找到Key Management Server 服务器，启动服务，并确保启动类型为自动。</p>
-<h2 id="防火墙"><a href="#防火墙" class="headerlink" title="防火墙"></a>防火墙</h2><p>将防火墙开放1688/tcp端口，或者直接关闭防火墙。</p>
-<h2 id="验证服务是否正常运行"><a href="#验证服务是否正常运行" class="headerlink" title="验证服务是否正常运行"></a>验证服务是否正常运行</h2><p>输入 <code>./vlmcs-Windows-x64.exe</code></p>
-<p>显示 successful 字样，则代表部署成功。</p>
+<h1 id="随机标识符-接口ID"><a href="#随机标识符-接口ID" class="headerlink" title="随机标识符/接口ID"></a>随机标识符/接口ID</h1><p>由于EUI-64生成的接口标识符,是由MAC地址生成。所以很容易根据IPv6地址来推断出设备的MAC地址。<br>EUI-64 是将48bit的MAC地址，其第七位取反，然后中间填充FFFE组成64bit的接口ID。<br>所以Windows会随机生成 64bit的接口标识符。看下面的输出，链路本地地址明显是和MAC地址无关的。<br>此地址是固定，一般生成之后，不会改变。</p>
+<blockquote>
+<p>C:\Users\admin&gt; ipconfig /all<br>  描述. . . . . . . . . . . . . . . : Intel(R) Wi-Fi 6 AX200 160MHz<br>  物理地址. . . . . . . . . . . . . : 46-68-5C-AA-41-11<br>  DHCP 已启用 . . . . . . . . . . . : 是<br>  自动配置已启用. . . . . . . . . . : 是<br>  本地链接 IPv6 地址. . . . . . . . : fe80::1e2:5910:14f3:a9d5%13(首选)</p>
+</blockquote>
+<h1 id="临时地址"><a href="#临时地址" class="headerlink" title="临时地址"></a>临时地址</h1><p>由于SLAAC产生的地址的接口ID，是接口标识符的，所以后64bit是基本不变的，这样很容易被跟踪。<br>所以需要临时地址。<br>临时地址也是一样随机生成64bit接口ID，用于主机作为源IP主动访问网站和应用。但为了安全，会经常变化。<br>如在接口重新连接的时候，或者临时IPv6生存期到期的时候。会重新随机生成另一个临时IPv6地址。<br>在某种情况下，你会看到多个临时IPv6地址。这是因为旧的临时地址过期的时候，旧地址还有建立的连接。</p>
+<h1 id="查看IPv6协议配置"><a href="#查看IPv6协议配置" class="headerlink" title="查看IPv6协议配置"></a>查看IPv6协议配置</h1><p>使用 Powershell命令 <code>get-netipv6protocol</code> </p>
+<blockquote>
+<p>DefaultHopLimit               : 128<br>NeighborCacheLimit(Entries)   : 256<br>RouteCacheLimit(Entries)      : 4096<br>ReassemblyLimit(Bytes)        : 262676960<br>IcmpRedirects                 : Enabled<br>SourceRoutingBehavior         : DontForward<br>DhcpMediaSense                : Enabled<br>MediaSenseEventLog            : Disabled<br>MldLevel                      : All<br>MldVersion                    : Version2<br>MulticastForwarding           : Disabled<br>GroupForwardedFragments       : Disabled<br>RandomizeIdentifiers          : Enabled  //随机接口ID开启<br>AddressMaskReply              : Disabled<br>UseTemporaryAddresses         : Enabled  //临时IPv6地址开启<br>MaxTemporaryDadAttempts       : 3        //临时IPv6的重复地址检测尝试次数<br>MaxTemporaryValidLifetime     : 7.00:00:00 //临时地址最大有效时间。<br>MaxTemporaryPreferredLifetime : 7.00:00:00<br>TemporaryRegenerateTime       : 00:00:05<br>MaxTemporaryDesyncTime        : 00:10:00<br>DeadGatewayDetection          : Enabled</p>
+</blockquote>
+<h1 id="SLAAC的DNS服务器地址分配–RDNSS"><a href="#SLAAC的DNS服务器地址分配–RDNSS" class="headerlink" title="SLAAC的DNS服务器地址分配–RDNSS"></a>SLAAC的DNS服务器地址分配–RDNSS</h1><p>源于一个较新的IPv6标准(RFC 8106)。从Windows 10 1703开始，Windows支持使用无状态获取DNS服务器了。<br>不过，DHCPv6 获取的DNS服务器优于通过RA报文获取的DNS服务器。<br>Android 从4.2开始支持，iOS 从4.1开始支持，MacOS从 10.7开始支持。</p>
+<p>PS：Android至今都不支持DHCPv6，很气人。</p>
+<p>来源： <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Comparison_of_IPv6_support_in_operating_systems">https://en.wikipedia.org/wiki/Comparison_of_IPv6_support_in_operating_systems</a></p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a target="_blank" rel="noopener" href="https://datatracker.ietf.org/doc/html/rfc8106">https://datatracker.ietf.org/doc/html/rfc8106</a><br><a target="_blank" rel="noopener" href="https://www.networkacademy.io/ccna/ipv6/ipv6-on-windows">https://www.networkacademy.io/ccna/ipv6/ipv6-on-windows</a><br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/powershell/module/nettcpip/get-netipv6protocol?view=windowsserver2022-ps">https://docs.microsoft.com/en-us/powershell/module/nettcpip/get-netipv6protocol?view=windowsserver2022-ps</a></p>
+<p>PS：随机标识符和临时地址，其他系统也会使用，如MacOS从10.7也开始使用了，Android iOS Linux等系统较新版本也支持。</p>
 
     </div>
 
@@ -230,7 +227,9 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/Windows/" rel="tag"># Windows</a>
+              <a href="/tags/IPv6/" rel="tag"># IPv6</a>
+              <a href="/tags/network/" rel="tag"># network</a>
+              <a href="/tags/windows/" rel="tag"># windows</a>
           </div>
 
         
@@ -239,13 +238,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/KMS/" rel="prev" title="部署私有KMS服务器，并设置自动激活Windows和office">
-      <i class="fa fa-chevron-left"></i> 部署私有KMS服务器，并设置自动激活Windows和office
+    <a href="/ipv6/" rel="prev" title="IPv6 简笔">
+      <i class="fa fa-chevron-left"></i> IPv6 简笔
     </a></div>
-      <div class="post-nav-item">
-    <a href="/ipv6/" rel="next" title="IPv6 简笔">
-      IPv6 简笔 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -304,7 +300,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E8%A7%A3%E5%8E%8B%E7%A8%8B%E5%BA%8F"><span class="nav-number">1.</span> <span class="nav-text">下载解压程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8%E5%86%8C%E4%B8%BAWindows-%E6%9C%8D%E5%8A%A1%E3%80%82"><span class="nav-number">2.</span> <span class="nav-text">注册为Windows 服务。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8%E6%9C%8D%E5%8A%A1"><span class="nav-number">3.</span> <span class="nav-text">启动服务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%98%B2%E7%81%AB%E5%A2%99"><span class="nav-number">4.</span> <span class="nav-text">防火墙</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%AA%8C%E8%AF%81%E6%9C%8D%E5%8A%A1%E6%98%AF%E5%90%A6%E6%AD%A3%E5%B8%B8%E8%BF%90%E8%A1%8C"><span class="nav-number">5.</span> <span class="nav-text">验证服务是否正常运行</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Windows%E5%92%8CEUI-64"><span class="nav-number">1.</span> <span class="nav-text">Windows和EUI-64</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9A%8F%E6%9C%BA%E6%A0%87%E8%AF%86%E7%AC%A6-%E6%8E%A5%E5%8F%A3ID"><span class="nav-number">2.</span> <span class="nav-text">随机标识符&#x2F;接口ID</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%B4%E6%97%B6%E5%9C%B0%E5%9D%80"><span class="nav-number">3.</span> <span class="nav-text">临时地址</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8BIPv6%E5%8D%8F%E8%AE%AE%E9%85%8D%E7%BD%AE"><span class="nav-number">4.</span> <span class="nav-text">查看IPv6协议配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SLAAC%E7%9A%84DNS%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9C%B0%E5%9D%80%E5%88%86%E9%85%8D%E2%80%93RDNSS"><span class="nav-number">5.</span> <span class="nav-text">SLAAC的DNS服务器地址分配–RDNSS</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">6.</span> <span class="nav-text">参考</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
