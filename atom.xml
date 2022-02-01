@@ -6,7 +6,7 @@
   <link href="https://songxwn.com/atom.xml" rel="self"/>
   
   <link href="https://songxwn.com/"/>
-  <updated>2022-02-01T07:07:37.098Z</updated>
+  <updated>2022-02-01T07:16:40.147Z</updated>
   <id>https://songxwn.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://songxwn.com/network-test/"/>
     <id>https://songxwn.com/network-test/</id>
     <published>2022-02-01T07:04:00.000Z</published>
-    <updated>2022-02-01T07:07:37.098Z</updated>
+    <updated>2022-02-01T07:16:40.147Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h1&gt;&lt;p&gt;本文章介绍了 Linux下iperf3（点对点测试），speedtest（公网测试）的安装和使用方法。&lt;/p&gt;</summary>
