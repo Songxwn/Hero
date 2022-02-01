@@ -212,4 +212,104 @@
         <tag>network</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Linux下的网络测试</title>
+    <url>/network-test/</url>
+    <content><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>本文章介绍了 Linux下iperf3（点对点测试），speedtest（公网测试）的安装和使用方法。</p>
+<span id="more"></span>
+
+<h2 id="iperf3"><a href="#iperf3" class="headerlink" title="iperf3"></a>iperf3</h2><h3 id="Centos-RHEL、Fedora、Rocky-Linux等Redhat系发行版-安装iperf3"><a href="#Centos-RHEL、Fedora、Rocky-Linux等Redhat系发行版-安装iperf3" class="headerlink" title="Centos (RHEL、Fedora、Rocky Linux等Redhat系发行版) 安装iperf3"></a>Centos (RHEL、Fedora、Rocky Linux等Redhat系发行版) 安装iperf3</h3><p>yum -y install iperf3</p>
+<p>systemctl stop firewalld.service</p>
+<p>临时关闭防火墙，作为服务端启动时候，默认会使用5201端口，需要放开此端口。</p>
+<h3 id="Ubuntu（Mint、Debian系发行版）安装iperf3"><a href="#Ubuntu（Mint、Debian系发行版）安装iperf3" class="headerlink" title="Ubuntu（Mint、Debian系发行版）安装iperf3"></a>Ubuntu（Mint、Debian系发行版）安装iperf3</h3><p>sudo apt update</p>
+<p>sudo apt install iperf3</p>
+<p>sudo ufw disable</p>
+<p>永久关闭防火墙，作为服务端启动时候，默认会使用5201端口，需要放开此端口。</p>
+<h3 id="iperf3-使用方法（全平台通用）"><a href="#iperf3-使用方法（全平台通用）" class="headerlink" title="iperf3 使用方法（全平台通用）"></a>iperf3 使用方法（全平台通用）</h3><p>iperf3 -s</p>
+<p>开启iperf3 服务器端，默认使用5201端口。</p>
+<p>iperf3 -s -p 9527</p>
+<p>开启服务器端，指定开启端口为9527。</p>
+<p>iperf3 -c 192.168.0.1 </p>
+<p>-c 参数客户端指定服务器端IP或域名进行打流测试，默认使用TCP端口5201测试。<br>(默认使用最大带宽，TCP 延迟过大可能导致带宽打不满，建议使用 -P 5 参数多线程测试)</p>
+<p>iperf3 -c 192.168.0.1 -p 12345 -i 1 -t 20 -R </p>
+<p>-p 为指定服务器端口， -i 为信息输出间隔时间，-t 为指定测试时间，-R 为反向模式，客户端收，服务器发。</p>
+<p>iperf3 -c 192.168.0.1 -u -b 30m</p>
+<p>-u 为UDP测试数据，-b为指定带宽去测试， UDP默认只使用1M。</p>
+<p>iperf官网： <a href="https://iperf.fr/">https://iperf.fr</a></p>
+<p>PS: 注意云服务器会有安全组，也需要开放端口。</p>
+<h2 id="speedtest"><a href="#speedtest" class="headerlink" title="speedtest"></a>speedtest</h2><h3 id="Centos-speedtest-CLI客户端安装-RHEL、Fedora、Rocky-Linux等Redhat系发行版"><a href="#Centos-speedtest-CLI客户端安装-RHEL、Fedora、Rocky-Linux等Redhat系发行版" class="headerlink" title="Centos speedtest CLI客户端安装  (RHEL、Fedora、Rocky Linux等Redhat系发行版)"></a>Centos speedtest CLI客户端安装  (RHEL、Fedora、Rocky Linux等Redhat系发行版)</h3><p>curl -s <a href="https://install.speedtest.net/app/cli/install.rpm.sh">https://install.speedtest.net/app/cli/install.rpm.sh</a> | sudo bash</p>
+<p>sudo yum -y install speedtest</p>
+<p>添加yum源 进行安装。</p>
+<h3 id="Ubuntu-speedtest-CLI客户端安装-（Mint、Debian系发行版）"><a href="#Ubuntu-speedtest-CLI客户端安装-（Mint、Debian系发行版）" class="headerlink" title="Ubuntu speedtest CLI客户端安装 （Mint、Debian系发行版）"></a>Ubuntu speedtest CLI客户端安装 （Mint、Debian系发行版）</h3><p>sudo apt-get install curl</p>
+<p>curl -s <a href="https://install.speedtest.net/app/cli/install.deb.sh">https://install.speedtest.net/app/cli/install.deb.sh</a> | sudo bash</p>
+<p>sudo apt-get install speedtest</p>
+<p>添加apt源进行安装，</p>
+<h3 id="二进制包-speedtest-CLI客户端安装（下载二进制包解压运行）"><a href="#二进制包-speedtest-CLI客户端安装（下载二进制包解压运行）" class="headerlink" title="二进制包 speedtest CLI客户端安装（下载二进制包解压运行）"></a>二进制包 speedtest CLI客户端安装（下载二进制包解压运行）</h3><p>wget <a href="https://install.speedtest.net/app/cli/ookla-speedtest-1.1.1-linux-x86_64.tgz">https://install.speedtest.net/app/cli/ookla-speedtest-1.1.1-linux-x86_64.tgz</a></p>
+<p>tar -zxvf ookla-speedtest-1.1.1-linux-x86_64.tgz</p>
+<p>./speedtest</p>
+<p>执行二进制文件测试。</p>
+<h3 id="speedtest-使用方法"><a href="#speedtest-使用方法" class="headerlink" title="speedtest 使用方法"></a>speedtest 使用方法</h3><p>speedtest</p>
+<p>Do you accept the license? [type YES to accept]: YES</p>
+<p>直接执行命令，然后输入YES,会根据IP选择最近的节点进行最大公网上下行和延迟测试。</p>
+<p>speedtest -s 37235</p>
+<p>指定服务器节点进行测试，下面是服务器节点ID。</p>
+<p>ID：36646 中国联通河南5G（中国郑州）</p>
+<p>ID：41852 河南电信5G（中国郑州</p>
+<p>ID：5039中国联通济南分公司（中国济南）</p>
+<p>ID：26412 济南联通5G（中国济南）</p>
+<p>ID：26180 山东联通5G（中国济南）</p>
+<p>ID：41912 中国移动河北有限公司(石家庄, 中国）</p>
+<p>ID：4863 中国联通西安分公司（中国西安）</p>
+<p>ID：17145 中国电信安徽5G（中国合肥）</p>
+<p>ID：23844 中国电信武汉分公司（中国武汉）</p>
+<p>ID：29353 武汉你好5G（中国武汉）</p>
+<p>ID：41009 湖北联通5G（中国武汉）</p>
+<p>ID：26352 中国电信江苏5G（中国南京）</p>
+<p>ID：13704 中国联通（中国南京）</p>
+<p>ID：27249 中国移动江苏5G（中国南京）</p>
+<p>ID：34115 中国电信天津-5G（中国天津）</p>
+<p>ID：35722 中国电信天津（天津）</p>
+<p>ID：27154 中国联通-5G（中国天津）</p>
+<p>ID：17320 中国移动江苏5G（中国镇江）</p>
+<p>ID：36663 中国电信江苏5G（中国镇江）</p>
+<p>ID：5145 北京联通（中国北京）</p>
+<p>ID：5505 北京宽带网（中国北京）</p>
+<p>ID：32291 中国移动5G（中国常州）</p>
+<p>ID：30232 内蒙古中国移动5G（呼和浩特）</p>
+<p>ID：28225 湖南电信5G（中国长沙）</p>
+<p>ID：4870 湖南联通5G（中国长沙）</p>
+<p>ID：28491 中国移动湖南5G（中国长沙）</p>
+<p>ID：40131 中国移动苏州5G（中国苏州）</p>
+<p>ID：5396 中国电信江苏5G（中国苏州）</p>
+<p>ID：30852 杜克昆山大学（中国昆山）</p>
+<p>ID：31815 维克斯特尔（中国银川市）</p>
+<p>ID：7509 中国电信浙江省分公司（中国杭州）</p>
+<p>ID：24447 中国联通5G（中国上海）</p>
+<p>ID：3633 中国电信（中国上海）</p>
+<p>ID：25637 中国移动5G（中国上海）</p>
+<p>ID：5530 CCN（中国重庆）</p>
+<p>ID：16145 兰州，中国移动，甘肃（中国兰州）</p>
+<p>ID：3973 中国电信（中国兰州）</p>
+<p>ID：29071 中国电信(成都, 中国）</p>
+<p>ID：24337 中国移动集团四川有限公司（中国成都）</p>
+<p>ID：35527 sccn（中国成都）</p>
+<p>ID：4884 中国联通福建（中国福州）</p>
+<p>ID：34988 中国电信辽宁5G（中国沈阳）</p>
+<p>ID：37235 中国联通（沈阳）</p>
+<p>ID：30293 中国移动内蒙5G（中国通辽）</p>
+<p>ID：29107 亚太电信（台湾桃园）</p>
+<p>ID：24462 Homeplus（台湾桃园）</p>
+<p>ID：4938 首席电信（台湾桃园）</p>
+<p>ID：18452 中华移动（台湾桃园）</p>
+<p>ID：9484 中国联通（中国长春）</p>
+<p>speedtest CLI客户端官网：<a href="https://www.speedtest.net/apps/cli">https://www.speedtest.net/apps/cli</a></p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>network</tag>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
 </search>
