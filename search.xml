@@ -314,7 +314,7 @@
       </tags>
   </entry>
   <entry>
-    <title>MPLS VPN随笔（单域）</title>
+    <title>MPLS VPN随笔（L3 单域）</title>
     <url>/MPLS_VPN/</url>
     <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>全称应该叫BGP/MPLS IP VPN，是一个多协议集合的三层VPN解方案。</p>
 <p>它使用BGP在服务提供商骨干网上发布VPN路由，使用MPLS在服务提供商骨干网上转发VPN报文。</p>
@@ -335,7 +335,7 @@
 <p>中间 P 设备到出站PE+<br>当出站PE收到数据的时候，只剩下一层私网标签。（PHP原因，倒数第二跳弹出标签）<br>然后根据私网标签，转发到指定的VRF。（剥离私网标签）</p>
 <p>数据从出站PE到远端CE （只是普通IP转发，出站PE的接口绑定VRF）</p>
 <p>（为什么需要外网标签呢？ 因为P设备没有VPNv4的私网路由，无法建立LSP）</p>
-<h2 id="公网标签与私网标签"><a href="#公网标签与私网标签" class="headerlink" title="公网标签与私网标签"></a>公网标签与私网标签</h2><p>公网标签通过LDP建立，PE和PE设备都参与一条LSP。<br>私网标签，通过MP-BGP建立，两端PE进行建立LSP。<br>所以私网标签只需要MP-BGP建立邻居关系，</p>
+<h2 id="公网标签与私网标签"><a href="#公网标签与私网标签" class="headerlink" title="公网标签与私网标签"></a>公网标签与私网标签</h2><p>公网标签通过LDP建立，PE和PE设备都参与一条LSP。<br>私网标签，通过MP-BGP建立，两端PE进行建立LSP。<br>所以私网标签只需要MP-BGP建立邻居关系。（P与PE之间，只需要底层路由互通，不需要BGP。）</p>
 ]]></content>
       <categories>
         <category>network</category>

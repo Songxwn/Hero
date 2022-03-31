@@ -6,7 +6,7 @@
   <link href="https://songxwn.com/atom.xml" rel="self"/>
   
   <link href="https://songxwn.com/"/>
-  <updated>2022-02-01T07:50:21.861Z</updated>
+  <updated>2022-03-31T03:21:31.599Z</updated>
   <id>https://songxwn.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>MPLS VPN随笔（单域）</title>
+    <title>MPLS VPN随笔（L3 单域）</title>
     <link href="https://songxwn.com/MPLS_VPN/"/>
     <id>https://songxwn.com/MPLS_VPN/</id>
-    <published>2022-02-01T07:31:00.000Z</published>
-    <updated>2022-02-01T07:50:21.861Z</updated>
+    <published>2022-03-31T07:31:00.000Z</published>
+    <updated>2022-03-31T03:21:31.599Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h1&gt;&lt;p&gt;全称应该叫BGP/MPLS IP VPN，是一个多协议集合的三层VPN解方案。&lt;/p&gt;
