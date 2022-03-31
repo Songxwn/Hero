@@ -40,8 +40,9 @@
 <p><img src="/images/pasted-2.png" alt="upload successful"></p>
 <p>然后填写以上，域名为你的域名。服务为 _vlmcs 协议为 _tcp 。端口号为 1688 。<br>提供此服务的主机为   KMS服务器的IP。</p>
 <p>然后配置DHCP 服务器分配的DNS域名后缀为 esc.com即可。<br>之后，未激活的Windows 开机就会通过DHCP获取到 DNS 后缀，然后通过DNS域名中的SVR记录找到<br>KMS激活服务器，并自动激活。其中VL的OFFICE也会自动激活。</p>
-<h2 id="Office-VL版"><a href="#Office-VL版" class="headerlink" title="Office VL版"></a>Office VL版</h2><p>建议使用 Office Tool Plus 安装VL版本，并安装许可证。</p>
+<h2 id="Windows-下载-和-Office-VL版"><a href="#Windows-下载-和-Office-VL版" class="headerlink" title="Windows 下载 和 Office VL版"></a>Windows 下载 和 Office VL版</h2><p>建议使用 Office Tool Plus 安装VL版本，并安装许可证。</p>
 <p>下载地址： <a href="https://otp.landian.vip/zh-cn/download.html">https://otp.landian.vip/zh-cn/download.html</a></p>
+<p>Windows 第三方下载站： <a href="https://next.itellyou.cn/">https://next.itellyou.cn/</a></p>
 ]]></content>
       <categories>
         <category>KMS</category>
@@ -302,7 +303,7 @@
 <p>ID：4938 首席电信（台湾桃园）</p>
 <p>ID：18452 中华移动（台湾桃园）</p>
 <p>ID：9484 中国联通（中国长春）</p>
-<p>speedtest CLI客户端官网：<a href="https://www.speedtest.net/apps/cli">https://www.speedtest.net/apps/cli</a><br>测试节点来源于：<a href="https://biger.me/184.html">https://biger.me/184.html</a></p>
+<p>speedtest CLI客户端官网：<a href="https://www.speedtest.net/apps/cli">https://www.speedtest.net/apps/cli</a><br>测试节点信息来源于：<a href="https://biger.me/184.html">https://biger.me/184.html</a></p>
 ]]></content>
       <categories>
         <category>Linux</category>
@@ -310,6 +311,39 @@
       <tags>
         <tag>network</tag>
         <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MPLS VPN随笔（单域）</title>
+    <url>/MPLS_VPN/</url>
+    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>全称应该叫BGP/MPLS IP VPN，是一个多协议集合的三层VPN解方案。</p>
+<p>它使用BGP在服务提供商骨干网上发布VPN路由，使用MPLS在服务提供商骨干网上转发VPN报文。</p>
+<p>其中，MPLS标签由MP-BGP和LDP分发，</p>
+<span id="more"></span>
+
+<h2 id="CE-PE-P-设备角色"><a href="#CE-PE-P-设备角色" class="headerlink" title="CE-PE-P 设备角色"></a>CE-PE-P 设备角色</h2><p>CE 用户边缘设备，用于连接PE，与MPLS VPN无直接关系。<br>只用于对接PE，交换路由信息。使用静态路由、OSPF RIP ISIS BGP等交换路由表。</p>
+<p>PE 运营商边缘设备，与CE直连，通过MP-BGP连接对端PE.<br>运行 MP-BGP，使用VRF通过绑定与CE连接的接口。隔离本地不同用户的路由表，打上RD和RT标签。<br>使用RD在BGP传输的过程中区分路由。<br>使用RT（VPN Target），确保导入对端PE的VRF。</p>
+<p>P 运营商骨干设备，与PE设备连接。只需要转发MPLS数据,使用IGP打通底层路由。</p>
+<h2 id="MPLS-VPN路由发布"><a href="#MPLS-VPN路由发布" class="headerlink" title="MPLS VPN路由发布"></a>MPLS VPN路由发布</h2><p>CE到PE之间的路由交换（使用静态或动态路由）</p>
+<p>PE将接收的路由，注入指定的VRF (VRF与和CE连接的接口绑定)</p>
+<p>PE将VRF的路由注入MP-BGP（打上RD和RT标签，还有MPLS私网标签）成为VPNv4路由<br>其中RD和RT为手动指定，MPLS私网标签为MP-BGP分配。</p>
+<p>VPNv4路由通过MP-BGP在骨干网上传递，到指定的对端PE</p>
+<p>对端PE 根据RT导入指定的VRF。</p>
+<p>对端PE将路由发送给CE。</p>
+<h2 id="MPLS-VPN数据转发"><a href="#MPLS-VPN数据转发" class="headerlink" title="MPLS VPN数据转发"></a>MPLS VPN数据转发</h2><p>数据从CE到入站PE（只是普通IP转发，入站PE的接口绑定VRF）</p>
+<p>数据从入站PE到中间 P 设备，<br>首先压入私网标签，此标签是MP-BGP分配的，与VPNv4路由对应。LSP只是两端的PE之间建立。<br>然后压入公网标签，此标签是LDP分配的，LSP是入站PE、中间P设备、出站PE之间建立。<br>其中，P设备对于内层的私网标签是无感知的，只根据公网标签进行数据转发。</p>
+<p>中间 P 设备到出站PE+<br>当出站PE收到数据的时候，只剩下一层私网标签。（PHP原因，倒数第二跳弹出标签）<br>然后根据私网标签，转发到指定的VRF。（剥离私网标签）</p>
+<p>数据从出站PE到远端CE （只是普通IP转发，出站PE的接口绑定VRF）</p>
+<p>（为什么需要外网标签呢？ 因为P设备没有VPNv4的私网路由，无法建立LSP）</p>
+<h2 id="公网标签与私网标签"><a href="#公网标签与私网标签" class="headerlink" title="公网标签与私网标签"></a>公网标签与私网标签</h2><p>公网标签通过LDP建立，PE和PE设备都参与一条LSP。<br>私网标签，通过MP-BGP建立，两端PE进行建立LSP。<br>所以私网标签只需要MP-BGP建立邻居关系，</p>
+]]></content>
+      <categories>
+        <category>network</category>
+      </categories>
+      <tags>
+        <tag>network</tag>
+        <tag>mpls</tag>
+        <tag>vpn</tag>
       </tags>
   </entry>
 </search>

@@ -6,7 +6,7 @@
   <link href="https://songxwn.com/atom.xml" rel="self"/>
   
   <link href="https://songxwn.com/"/>
-  <updated>2022-02-01T07:16:40.147Z</updated>
+  <updated>2022-02-01T07:50:21.861Z</updated>
   <id>https://songxwn.com/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>MPLS VPN随笔（单域）</title>
+    <link href="https://songxwn.com/MPLS_VPN/"/>
+    <id>https://songxwn.com/MPLS_VPN/</id>
+    <published>2022-02-01T07:31:00.000Z</published>
+    <updated>2022-02-01T07:50:21.861Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h1&gt;&lt;p&gt;全称应该叫BGP/MPLS IP VPN，是一个多协议集合的三层VPN解方案。&lt;/p&gt;
+&lt;p&gt;它使用BGP在服务提供商骨干网上发布VPN路由，使用MPLS在服务提供商骨干网上转发VPN报文。&lt;/p&gt;
+&lt;p&gt;其中，MPLS标签由MP-BGP和LDP分发，&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="network" scheme="https://songxwn.com/categories/network/"/>
+    
+    
+    <category term="network" scheme="https://songxwn.com/tags/network/"/>
+    
+    <category term="mpls" scheme="https://songxwn.com/tags/mpls/"/>
+    
+    <category term="vpn" scheme="https://songxwn.com/tags/vpn/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Linux下的网络测试</title>
     <link href="https://songxwn.com/network-test/"/>
     <id>https://songxwn.com/network-test/</id>
     <published>2022-02-01T07:04:00.000Z</published>
-    <updated>2022-02-01T07:16:40.147Z</updated>
+    <updated>2022-02-01T07:29:23.024Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h1&gt;&lt;p&gt;本文章介绍了 Linux下iperf3（点对点测试），speedtest（公网测试）的安装和使用方法。&lt;/p&gt;</summary>
@@ -127,7 +152,7 @@
     <link href="https://songxwn.com/KMS/"/>
     <id>https://songxwn.com/KMS/</id>
     <published>2021-11-23T15:18:00.000Z</published>
-    <updated>2021-11-27T12:57:04.717Z</updated>
+    <updated>2022-03-31T02:39:44.742Z</updated>
     
     
     <summary type="html">&lt;p&gt;#Docker镜像地址： &lt;a href=&quot;https://hub.docker.com/r/mogeko/vlmcsd&quot;&gt;https://hub.docker.com/r/mogeko/vlmcsd&lt;/a&gt;&lt;/p&gt;
