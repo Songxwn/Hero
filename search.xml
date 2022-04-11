@@ -71,8 +71,8 @@
   <entry>
     <title>MPLS VPN随笔（L3 单域）</title>
     <url>/MPLS_VPN/</url>
-    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>全称应该叫BGP/MPLS IP VPN，是一个多协议集合的三层VPN解方案。</p>
-<p>它使用BGP在服务提供商骨干网上发布VPN路由，使用MPLS在服务提供商骨干网上转发VPN报文。</p>
+    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>全称应该叫BGP/MPLS IP VPN，是一个多协议集合的三层VPN解决方案。</p>
+<p>它使用MP-BGP在服务提供商骨干网上发布VPN路由，使用MPLS在服务提供商骨干网上转发VPN报文。</p>
 <p>其中，MPLS标签由MP-BGP(内网)和LDP（公网）分发，公网标签也可以使用RSVP分发，用于流量工程。</p>
 <span id="more"></span>
 

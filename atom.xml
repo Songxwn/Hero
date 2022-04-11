@@ -6,7 +6,7 @@
   <link href="https://songxwn.com/atom.xml" rel="self"/>
   
   <link href="https://songxwn.com/"/>
-  <updated>2022-03-31T07:27:41.342Z</updated>
+  <updated>2022-04-11T02:40:09.678Z</updated>
   <id>https://songxwn.com/</id>
   
   <author>
@@ -21,11 +21,11 @@
     <link href="https://songxwn.com/MPLS_VPN/"/>
     <id>https://songxwn.com/MPLS_VPN/</id>
     <published>2022-03-31T07:31:00.000Z</published>
-    <updated>2022-03-31T07:27:41.342Z</updated>
+    <updated>2022-04-11T02:40:09.678Z</updated>
     
     
-    <summary type="html">&lt;h1 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h1&gt;&lt;p&gt;全称应该叫BGP/MPLS IP VPN，是一个多协议集合的三层VPN解方案。&lt;/p&gt;
-&lt;p&gt;它使用BGP在服务提供商骨干网上发布VPN路由，使用MPLS在服务提供商骨干网上转发VPN报文。&lt;/p&gt;
+    <summary type="html">&lt;h1 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h1&gt;&lt;p&gt;全称应该叫BGP/MPLS IP VPN，是一个多协议集合的三层VPN解决方案。&lt;/p&gt;
+&lt;p&gt;它使用MP-BGP在服务提供商骨干网上发布VPN路由，使用MPLS在服务提供商骨干网上转发VPN报文。&lt;/p&gt;
 &lt;p&gt;其中，MPLS标签由MP-BGP(内网)和LDP（公网）分发，公网标签也可以使用RSVP分发，用于流量工程。&lt;/p&gt;</summary>
     
     
